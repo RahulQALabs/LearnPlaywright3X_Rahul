@@ -32,17 +32,17 @@ STEP 1 ── TOKENIZATION (Lexer / Scanner)
     │
     ▼
 TOKENS:
-┌────────────┬──────────────┐
-│ Token      │ Type         │
-├────────────┼──────────────┤
-│ console    │ Identifier   │
+┌────────────┬────────────── ┐
+│ Token      │ Type          │
+├────────────┼────────────── ┤
+│ console    │ Identifier    │
 │ .          │ Dot/Punctuator│
-│ log        │ Identifier   │
-│ (          │ LeftParen    │
-│ "Hello, W…"│ StringLiteral│
-│ )          │ RightParen   │
-│ ;          │ Semicolon    │
-└────────────┴──────────────┘
+│ log        │ Identifier    │
+│ (          │ LeftParen     │
+│ "Hello, W…"│ StringLiteral │
+│ )          │ RightParen    │
+│ ;          │ Semicolon     │
+└────────────┴────────────── ┘
     │
     ▼
 ═══════════════════════════════════════════

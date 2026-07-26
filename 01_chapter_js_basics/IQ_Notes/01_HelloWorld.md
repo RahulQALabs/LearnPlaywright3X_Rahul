@@ -579,3 +579,110 @@ function safeProcess(data) {
 ---
 
 > **Bottom line:** Your `console.log("Hello, World!")` goes through tokenization, AST parsing, bytecode generation, and optionally JIT compilation — all in microseconds — before "Hello, World!" appears on screen. Understanding this pipeline is the difference between a junior and senior JavaScript developer in interviews.
+
+---
+
+## ➕ Bonus: Hello World — Beginner Concepts
+
+### What is `console.log`?
+
+`console.log()` is a built-in JavaScript function that prints output to the terminal (Node.js) or browser console.
+
+```javascript
+console.log("Hello, World!");
+// Output: Hello, World!
+```
+
+- `console` is a global object provided by the runtime (Node.js or browser).
+- `.log` is a method of the `console` object.
+- `"Hello, World!"` is a **string literal** passed as an argument.
+
+### How to Run a JavaScript File
+
+1. Create a file called `01_HelloWorld.js`
+2. Open terminal in the file's directory
+3. Run: `node 01_HelloWorld.js`
+4. You'll see: `Hello, World!`
+
+### Node.js Basics
+
+| Command | Purpose |
+|---------|---------|
+| `node filename.js` | Run a JavaScript file |
+| `node` (no file) | Opens REPL (interactive mode) |
+| `Ctrl + C` twice | Exit REPL |
+| `taskkill /F /IM node.exe` | Kill stuck Node processes (Windows) |
+
+### Common Beginner Questions
+
+**Q: Why do we need Node.js to run JavaScript?**
+A: JavaScript was originally only for browsers. Node.js is a runtime that lets you run JavaScript outside the browser, on your computer/server.
+
+**Q: What happens when you run `node file.js`?**
+A: Node.js reads the file, passes it to V8 (Google's JS engine), which compiles and executes it.
+
+**Q: Why is my terminal stuck?**
+A: You might have an infinite loop or the process didn't exit. Run `taskkill /F /IM node.exe` (Windows) or `killall node` (Mac/Linux) to stop it.
+
+---
+
+## ➕ Bonus: Basic JavaScript Program Structure
+
+### Comments
+
+```javascript
+// This is a single-line comment (Ctrl + /)
+
+/* This is a multi-line comment
+   Author: Rahul Gupta
+   Date: 2023-06-15 */
+// Shortcut: Shift + Alt + A
+```
+
+### Rules
+
+1. JavaScript files have `.js` extension.
+2. Statements can end with `;` (optional but recommended).
+3. Code runs from top to bottom.
+4. Variables must be declared before use (with `let`, `const`, or `var`).
+5. Functions can be defined anywhere (hoisted if using `function` keyword).
+
+### Hello World Variations
+
+```javascript
+// Basic
+console.log("Hello, World!");
+
+// With variable
+let name = "Rahul";
+console.log("Hello, " + name);
+
+// With template literal
+console.log(`Hello, ${name}!`);
+
+// Using a function
+function greet(name) {
+    console.log(`Hello, ${name}!`);
+}
+greet("World");
+```
+
+---
+
+## ➕ Bonus: Interview Questions — Beginner Level
+
+1. What is `console.log()` used for?
+2. How do you run a JavaScript file in Node.js?
+3. What is the difference between a JavaScript file and a Node.js environment?
+4. What does `node` do when you run it without a file?
+5. How do you kill a stuck Node.js process on Windows?
+6. What extension do JavaScript files use?
+7. What is the output of `console.log("Hello" + " World")`?
+8. What is a comment in JavaScript? How do you write one?
+9. What is the shortcut for a single-line comment in VS Code?
+10. What is the shortcut for a multi-line comment in VS Code?
+11. What is the difference between `console.log` and `console.error`?
+12. Can you run JavaScript in a browser without Node.js?
+13. How does JavaScript code execute — line by line or all at once?
+14. What does the semicolon `;` do in JavaScript?
+15. Is the semicolon mandatory in JavaScript?

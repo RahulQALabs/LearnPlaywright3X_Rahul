@@ -1,7 +1,7 @@
 // This is a single line comment in JavaScript.
 // this line will not execute
 
-/* This a multi-line comment in JavaScript
+/* (Shift + Alt + A) -- > This a multi-line comment in JavaScript
 Author : Rahul Gupta
 Date : 2023-06-15 */
 

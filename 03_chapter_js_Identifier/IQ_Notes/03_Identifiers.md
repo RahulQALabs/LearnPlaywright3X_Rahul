@@ -69,44 +69,154 @@ class Student {}
 
 ## 8. Naming Conventions
 
--   camelCase
--   PascalCase
--   UPPER_CASE
--   snake_case
+### camelCase
+- First word lowercase, subsequent words capitalized.
+- Used for: variables, function names, object properties.
 
-## 9. Examples
-
-``` javascript
-let age = 25;
-function calculate(){}
-class Student{}
-const employee = {};
+```javascript
+let firstName = "Rahul";
+let lastName = "Gupta";
+function getFullName() { return "Hello! Rahul Gupta"; }
 ```
 
-## 10. Internal Working
+### PascalCase
+- Every word starts with a capital letter.
+- Used for: class names, constructor functions.
 
-JavaScript stores identifiers in the current lexical environment and
-associates them with memory locations.
+```javascript
+let RollNumber = 987;  // for class/constructor names
+class Student {}
+```
 
-## 11. Memory Representation
+### snake_case
+- Words separated by underscores, all lowercase.
+- Used for: variable names (less common in JS, more in Python/databases).
 
-Stack stores primitive values directly.
+```javascript
+let first_name = "Rahul";
+let last_name = "Gupta";
+```
 
-Objects are stored in Heap, while the Stack stores their references.
+### SCREAMING_SNAKE_CASE (UPPER_CASE)
+- All uppercase with underscores between words.
+- Used for: constants, environment variables, configuration values.
 
-## 12. Best Practices
+```javascript
+const PI = 3.14;
+const API_KEY = "1234567890";
+const DB_URL = "mongodb://localhost:27017/mydatabase";
+```
 
--   Use meaningful names.
--   Prefer camelCase for variables and functions.
--   Use PascalCase for classes.
--   Use UPPER_CASE for constants.
+### Hungarian Notation
+- Prefix variable name with its data type.
+- Not commonly used in modern JavaScript.
 
-## 13. Common Mistakes
+```javascript
+let strName = "Rahul";
+let intAge = 25;
+let boolIsStudent = true;
+let arrNumbers = [1, 2, 3, 4, 5];
+```
 
--   Starting with numbers.
--   Using keywords.
--   Using spaces.
--   Using meaningless names.
+### Comparison Table
+
+| Convention | Example | Used For |
+|------------|---------|----------|
+| camelCase | `firstName` | Variables, functions |
+| PascalCase | `StudentClass` | Classes, constructors |
+| snake_case | `first_name` | Databases, Python interop |
+| SCREAMING_SNAKE | `API_KEY` | Constants, env variables |
+| Hungarian | `strName` | Not recommended (legacy) |
+
+---
+
+## 9. Valid and Invalid Identifiers — Reference Table
+
+### Valid Identifiers
+```
+a         _b        $c        _
+_o        aa45kk    name      Name
+rah$gpt   rah123gpt user_name $salary
+totalAmount  a1b2c3  fullName  _123
+Name123   first_name  $value
+姓名      café      naïve     π
+Δ        日本語    Δvalue
+```
+
+### Invalid Identifiers
+```
+123abc    → Cannot start with number
+first-name → Cannot contain hyphens
+class     → Reserved keyword
+if        → Reserved keyword
+var       → Reserved keyword
+const     → Reserved keyword
+my name   → Cannot contain spaces
+user@name → Cannot contain @
+rah&&123  → Cannot contain operators
+```
+
+---
+
+## 10. Rules (Complete with Edge Cases)
+
+1. Must start with a letter, `_`, or `$`.
+2. Cannot start with a number.
+3. Digits are allowed after the first character.
+4. No spaces allowed.
+5. Only `_` and `$` are allowed as special characters.
+6. Identifiers are **case-sensitive** — `name` and `Name` are different.
+7. Reserved keywords cannot be used (`class`, `if`, `var`, `const`, `let`, `function`, etc.).
+8. **Unicode characters are allowed** — you can use letters from any language.
+9. Use meaningful names that describe the purpose.
+10. Follow naming conventions (camelCase, PascalCase, etc.).
+
+---
+
+## 11. Reserved Keywords (Cannot Be Used as Identifiers)
+
+| Category | Keywords |
+|----------|----------|
+| Declaration | `var`, `let`, `const`, `function`, `class`, `import`, `export` |
+| Flow control | `if`, `else`, `switch`, `case`, `break`, `continue`, `return` |
+| Iteration | `for`, `while`, `do`, `in`, `of` |
+| Exception | `try`, `catch`, `finally`, `throw` |
+| Other | `this`, `new`, `typeof`, `instanceof`, `void`, `delete`, `with` |
+
+---
+
+## 12. Unicode in Identifiers
+
+JavaScript allows Unicode letters in identifiers. This means you can use non-English characters.
+
+```javascript
+let 姓名 = "Rahul";    // Chinese characters
+let café = "coffee";   // Accented characters
+let naïve = "value";   // Special characters
+let π = 3.14;          // Greek letters
+let Δ = 10;            // Mathematical symbols
+let 日本語 = "Japanese";
+let Δvalue = 5;
+```
+
+This is valid JavaScript but is **not recommended** in professional code as it reduces readability for international teams.
+
+---
+
+## 13. Common Mistakes — Expanded
+
+| Mistake | Example | Why It's Wrong |
+|---------|---------|----------------|
+| Start with number | `let 123abc = 12` | SyntaxError: Invalid token |
+| Contains hyphen | `let first-name = 14` | JavaScript interprets `-` as subtraction |
+| Reserved keyword | `let class = 15` | `class` is a reserved keyword |
+| Contains space | `let my name = 21` | Space is not allowed |
+| Contains `@` | `let user@name = 24` | `@` is not a valid identifier character |
+| Contains `&&` | `let rah&&123 = 90` | `&&` is an operator |
+| Confusing similar names | `let l = 1; let I = 2;` | Hard to read and debug |
+| Meaningless names | `let xyz = "data"` | No semantic meaning |
+
+---
 
 ## 14. FAQs
 
@@ -180,7 +290,60 @@ Can two identifiers differ only by case? **Yes.**
   Class      `Student`
   Constant   `MAX_SIZE`
 
-## 24. Summary
+## 24. Interview Questions (Expanded)
 
-Identifiers are names used to identify variables, functions, classes,
-objects, and other entities in JavaScript.
+### Easy Questions
+1. What is an identifier in JavaScript?
+2. What are the rules for naming identifiers?
+3. Can an identifier start with a number?
+4. Can identifiers start with `$`?
+5. Can identifiers start with `_`?
+6. Can keywords be used as identifiers?
+7. Are identifiers case-sensitive? Give an example.
+8. What is the difference between an identifier and a variable?
+9. What is the difference between an identifier and a literal?
+10. Is `name` a valid identifier?
+11. Is `Name` the same as `name`?
+12. Is `_` a valid identifier?
+13. Is `$` a valid identifier?
+14. Is `123abc` a valid identifier?
+15. Is `user_name` a valid identifier?
+
+### Medium Questions
+16. Identify which of these are valid identifiers: `firstName`, `first-name`, `first_name`, `1stName`, `$name`.
+17. Why is `class` not a valid identifier?
+18. Why is `first-name` not a valid identifier?
+19. What are the different naming conventions in JavaScript?
+20. What is camelCase? Give an example.
+21. What is PascalCase? Give an example.
+22. What is snake_case? Give an example.
+23. What is SCREAMING_SNAKE_CASE? Give an example.
+24. What is Hungarian Notation? Is it recommended?
+25. Which naming convention is used for JavaScript variables?
+26. Which naming convention is used for JavaScript classes?
+27. Which naming convention is used for constants?
+28. Can you use Unicode characters in identifiers? Give an example.
+29. Is `π` a valid identifier in JavaScript?
+30. Is `café` a valid identifier?
+31. What special characters are allowed in identifiers?
+32. Why is `@` not allowed in an identifier?
+33. Why is space not allowed in an identifier?
+34. Why is `-` (hyphen) not allowed in an identifier?
+35. What is the maximum length of an identifier?
+
+### Hard Questions
+36. Can two identifiers differ only by case? What are the risks?
+37. What are reserved keywords? List 10 of them.
+38. Why is `undefined` not a reserved keyword but can still cause issues?
+39. Can `let` be used as an identifier in non-strict mode? What about strict mode?
+40. How does JavaScript internally store identifiers?
+41. What is a lexical environment in relation to identifiers?
+42. How does scope affect identifier resolution?
+43. What happens when two identifiers have the same name but are in different scopes?
+44. Why is it bad practice to use short meaningless names like `a`, `b`, `x`?
+45. How do you fix a naming collision in JavaScript?
+46. What is the difference between `user-name` (invalid) and `user_name` (valid) — explain the parsing difference?
+47. Why does `let delete = 10` throw an error but `let deletex = 10` works?
+48. Explain the concept of "identifier resolution" in the scope chain.
+49. Can you use `await` as an identifier? Does it depend on the context?
+50. How do you choose between camelCase and snake_case for a JavaScript project?

@@ -1,22 +1,40 @@
-let name = "Rahul Gupta"; //String literal
+//String literal
+let name = "Rahul Gupta";
 
-let age = 25; //Number literal
+//Number literal
+let age = 25;
 
-let isStudent = true; //This is a Boolean literal assigned to a variable named isStudent. The value true indicates that the person is a student.
+/*This is a Boolean literal assigned to a variable named isStudent.
+The value true indicates that the person is a student.*/
+let isStudent = true;
 
-let pi = 3.14; //This is a Numeric literal assigned to pi. The value 3.14 represents the mathematical constant pi.
+/*This is a Numeric literal assigned to pi. 
+The value 3.14 represents the mathematical constant pi.*/
+let pi = 3.14;
 
-let nullValue = null; //This is a Null literal assigned to nullValue. The value null represents the absence of any object value.
+/*This is a Null literal assigned to nullValue. 
+The value null represents the absence of any object value.*/
+let nullValue = null;
 
-let undefinedValue = undefined; //This is an Undefined literal assigned to undefinedValue. The value undefined indicates that the variable has not been assigned a value.
+/*This is an Undefined literal assigned to undefinedValue. 
+The value undefined indicates that the variable has not been assigned a value.*/
+let undefinedValue = undefined;
 
-let person = { name: "Rahul Gupta", age: 25, isStudent: true }; //This is an Object literal assigned to a variable named person. It contains three properties: name, age, and isStudent.
+/*This is an Object literal assigned to a variable named person.
+ It contains three properties: name, age, and isStudent.*/
+let person = { name: "Rahul Gupta", age: 25, isStudent: true };
 
-let colors = ["red", "green", "blue"]; //This is an Array literal assigned to colors. It contains three string elements representing colors.
+/*This is an Array literal assigned to colors. 
+It contains three string elements representing colors.*/
+let colors = ["red", "green", "blue"];
 
-let regex = "^[a-zA-Z0-9]+$"; //This is a Regular Expression literal assigned to regex. It defines a pattern that matches alphanumeric characters.
+/*This is a Regular Expression literal assigned to regex. 
+It defines a pattern that matches alphanumeric characters.*/
+let regex = "^[a-zA-Z0-9]+$";
 
-let a = 10; //This is a Numeric literal assigned to a variable named a. The value 10 represents the number ten.
+/*This is a Numeric literal assigned to a variable named a. 
+The value 10 represents the number ten.*/
+let a = 10;
 
 /* Numeric literals are used to represent numbers in JavaScript. 
 They can be integers or floating-point numbers. 

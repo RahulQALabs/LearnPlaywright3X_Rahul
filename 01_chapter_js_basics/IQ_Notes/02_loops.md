@@ -718,3 +718,31 @@ for (let i = 0, len = arr.length; i < len; i++) {
 ---
 
 > **Bottom line:** Loops are the backbone of iteration in JavaScript. Understanding their execution order, scope behavior (`let` vs `var`), and the right tool for each situation (indexed `for` for speed, `for...of` for readability, `while` for condition-driven logic) separates strong candidates from average ones in interviews. The `02_loop.js` example demonstrates how a simple `for` loop calling a function 10,000 times exercises scope, execution order, and the call stack — concepts that appear in nearly every JavaScript interview.
+
+---
+
+## ➕ Bonus Interview Questions — Based on `02_loop.js`
+
+### Beginner Questions
+1. What does the code in `02_loop.js` do?
+2. What is the purpose of `let x = "Rahul";` in the code?
+3. How many times does the loop in `02_loop.js` run?
+4. What is the value of `index` in the first iteration?
+5. What is the value of `index` in the last iteration?
+6. What is the output when `index` is 0?
+7. What is the output when `index` is 5?
+8. Can you change the loop to print only even numbers?
+9. What happens if you change `index < 10000` to `index <= 10000`?
+10. What is the difference between writing the function inside the loop vs outside?
+11. What is the variable `i` inside `printFn` — where does it come from?
+12. What would happen if you declared `x` with `const` instead of `let`?
+13. How would you modify the code to print only the first 10 values?
+14. What does `console.log(x + i)` produce — is `x` a string and `i` a number?
+15. Can you rewrite this code without a function, using the logic directly inside the loop?
+
+### Programming Practice
+16. Write a loop that prints numbers from 1 to 10.
+17. Write a loop that prints "Hello" 5 times.
+18. Write a loop that prints only odd numbers from 1 to 20.
+19. Write a loop that prints numbers in reverse (10 down to 1).
+20. Write a loop that sums numbers from 1 to 100.
