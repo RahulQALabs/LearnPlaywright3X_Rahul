@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(node verify_missing.js)",
+      "Shell(for:*)",
+      "Shell(*chapter*:*)",
+      "Shell(do:*)",
+      "Shell(else:*)",
+      "Shell(dir:*)",
+      "Shell(node verify_all.js)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}
