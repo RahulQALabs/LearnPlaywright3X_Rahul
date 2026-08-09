@@ -14,6 +14,15 @@ Buzz
 Numbers 1-5 with 3→Fizz, 5→Buzz */
 
 
+/*
+npm install prompt-sync - THis command should be run then you can see the ouput
+
+Terminal - 
+PS coding_practice\04_FizzBuzz.js
+
+*/
+
+
 console.log("Enter the num : ");
 let num = Number(require("fs").readFileSync(0, "utf8").trim());
 
@@ -31,7 +40,7 @@ for (let i = 1; i <= num; i++) {
 const data = require('fs').readFileSync(0, 'utf8');
 
 for (let i = 1; i <=data; i++) { 
-    if (i % 3 == 0 && i % 5 == 0)
+    if (i % 3 == 0 && data % 5 == 0)
         console.log("FizzBuzz");
     else if (i % 3 == 0)
         console.log("Fizz");
