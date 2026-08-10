@@ -6,5 +6,5 @@ function getStatusCode() {
     console.log(statusCode);
 }
 
-//Calling of tyhe function
+//Calling of type function
 getStatusCode();
